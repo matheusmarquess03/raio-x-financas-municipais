@@ -1,0 +1,18 @@
+[project]
+name = "raio-x-financas-municipais"
+version = "0.1.0"
+description = "Lakehouse com as finanças dos municípios brasileiros a partir da API do SICONFI."
+requires-python = ">=3.12"
+dependencies = ["requests", "pandas", "duckdb", "pyspark==4.0.*", "delta-spark==4.0.*"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
